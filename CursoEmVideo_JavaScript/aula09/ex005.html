@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(136, 210, 253);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <p>DOM é a sigla para Document Object Model</p>
+    <p>
+        Conjunto de objetos dentro do navegador
+        que vai dar acesso aos componentes internos 
+        do site.
+        O DOM não funciona dentro do Nodejs.
+        O DOM está presente quando rodamos o javascript dentro 
+        do navegador.
+    </p>
+    <p>Árvore DOM.
+        1. raiz, Tudo do javascript esta num objeto chamado window
+        2. dentro de window temos outros objetos
+        ex
+            * location (diz a localização do seu site/ url/ qual a pagina atual, qual a anterior)/ 
+            document( ) / 
+            history (de onde vc veio, par onde vc vai)  
+
+        dentro de document temos o child html, nesse caso document é parent de html 
+        dentro do html temos os childs head e body. Nesse caso html é parent de head e body
+        é uma árvore hierárquica
+        window > location / document / history
+            document> html 
+                html> head / body 
+                    head> meta / title 
+                    body> h1 / p / p/ p/ div/
+                        p/> strong 
+    </p>
+    <p>
+        Selecionando elementos por:
+    /tag name(por marca)/
+    dentro de document o comando getElementsByTagName()
+    /por ID/
+        getElementById() (os elementos precisam estar identificados)
+    /por Nome/
+        getElementsByName()
+    /por Classe/ 
+        getElementsByClassName()
+    /por seletor/ método mais recente
+    querySelector()
+    querySelectorAll()
+        
+
+
+    </p>
+        <div id="msg">Clique em mim</div>
+        <div id="msg">exemplo de id</div>
+        <div name='msg'>Exemplo de nome</div>
+        <div class='msg'>Exemplo de classe</div>
+
+    <script>
+        //window.document.write('Olá, Mundo!') // adicionou componete
+        //window.document.write(window.document.charset)// adicionou charset
+        //window.document.write(window.navigator.appName)//mostra o tipo de navegador
+        //window.document.write(window.document.URL)//mostra a url que vc ta acessando
+        //var corpo = window.document.body
+        //var p1 = window.document.getElementsByTagName('p')[1]//esse número corresponde a ordem crescente da tag, quando ela se repete mais que uma vez. a contagem começa do 0
+        //window.document.write('Esta escrito assim: ' + p1.innerText)//Mostra o texto selecionado
+        //p1.style.color = 'blue' // mudou a cor do paragarfo selecionado
+        //corpo.style.background = 'black' // mudou a cor do fundo
+        //document.write(p1.innerText)//puxa só o texto
+        //document.write(p1.innerHTML)// puxa a formatação tb
+        //window.alert(p1.innerHTML)// mostra o paragarfo na janela de alerta
+        //window.alert(p1.innerText)
+        //var d = window.document.getElementById('msg')
+        //d.style.background = 'green'
+        //d.innerText = 'Estou Aguardando...'
+        //window.document.getElementById('msg').innerText = 'Olá!'
+        //var d = window.document.getElementsByName('msg')[0]
+        //d.innerText = 'Oláaa'
+        //var d = window.document.querySelector('div.msg')// toda div é representada por # classe por .
+        //d.style.color = 'blue'
+    </script>
+</body>
+</html>
